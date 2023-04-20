@@ -1,1 +1,9 @@
+version : "3.3"
+services :
+  notes-app-testing :
+     build :
+      context: .
+      dockerfile: Dockerfile.testing
+     ports :
+         - "8888:8888"
 
