@@ -8,7 +8,7 @@ pipeline{
                 branch "main"
             }
             steps{
-                sh "docker-conpose up -d"
+                sh "docker-compose up -d"
             }
         }
         stage("running app for testing branch"){
