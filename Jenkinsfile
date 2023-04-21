@@ -2,10 +2,6 @@ pipeline{
     agent {
         label "jenkins-agent2"
     }
-    triggers {
-        githubPush()
-        pollSCM('H/30 * * * *')
-    }
     stages{
         stage("building for the dev branch"){
             when{
