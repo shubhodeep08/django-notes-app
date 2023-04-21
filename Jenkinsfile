@@ -16,7 +16,7 @@ pipeline{
                 branch "dev"
             }
             steps{
-                sh "docker-compose -f docker-compose-dev up -d"
+                sh "docker-compose -f docker-compose-dev.yml up -d"
             }
         }
 
