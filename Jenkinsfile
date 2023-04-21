@@ -16,18 +16,18 @@ pipeline{
         }
         stage("building for the dev branch"){
             when{
-                branch "dev"
+                branch "main"
             }
             steps{
-                sh "docker-conpose -f docker-compose-dev.yml up -d"
+                sh "docker-conpose -f Dockerfile up -d"
             }
         }
         stage("running app for testing branch"){
             when{
-                branch "testing"
+                branch "dev"
             }
             steps{
-                sh "docker-compose -f docker-compose-testing up -d"
+                sh "docker-compose -f docker-compose-dev up -d"
             }
         }
 
